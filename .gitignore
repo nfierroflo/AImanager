@@ -1,15 +1,21 @@
 # Personal Data Protection
-/resumes/base/**/*
-!/resumes/base/.gitkeep
-!/resumes/base/main.tex
-!/resumes/base/sections/
-!/resumes/base/style/
-!/resumes/base/assets/
-!/resumes/base/output/
-/resumes/versions/**/*
-!/resumes/versions/.gitkeep
-/resumes/archive/**/*
-!/resumes/archive/.gitkeep
+/project/resumes/base/**
+!/project/resumes/base/.gitkeep
+/project/resumes/versions/**
+!/project/resumes/versions/.gitkeep
+/project/resumes/archive/**
+!/project/resumes/archive/.gitkeep
+
+# Specific file types to ignore
+*.jpg
+*.jpeg
+*.png
+*.pdf
+*.tex
+*.cls
+*.sty
+*.bib
+*.zip
 
 # Python
 __pycache__/
@@ -58,8 +64,6 @@ ENV/
 *.dvi
 *.ps
 *.eps
-*.pdf
-!**/output/*.pdf
 
 # Database
 *.db
