@@ -6,6 +6,7 @@
 /project/resumes/archive/**
 !/project/resumes/archive/.gitkeep
 
+project_plan.md
 # Specific file types to ignore
 *.jpg
 *.jpeg
