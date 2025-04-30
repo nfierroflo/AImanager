@@ -1,0 +1,228 @@
+%%%%%%%%%%%%%%%%%
+% This is an example CV created using altacv.cls (v1.1.5, 1 December 2018) written by
+% LianTze Lim (liantze@gmail.com), based on the
+% Cv created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[9pt,a4paper,ragged2e]{altacv}
+
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages.
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+
+% Change the page layout if you need to
+\geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Carlito}
+\else
+  % If using pdflatex:
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[default]{lato}
+\fi
+\definecolor{highlight}{RGB}{0, 76, 153}
+\usepackage[colorlinks=true,urlcolor=highlight]{hyperref}
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{2E2E2E}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{VividPurple}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{Nicolás Fierro}
+\tagline{Artificial Intelligence Engineer}
+\photo{2.5cm}{foto cv.jpg}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{nfierroflo@gmail.com}
+    \phone{+56 9 68296315} 
+  \github{\href{https://github.com/nfierroflo}{nfierroflo}} % I'm just making this up though.
+\linkedin{\href{https://www.linkedin.com/in/nicolas-fierro-flores/}{nicolas-fierro-flores}}
+\href{https://nfierroflo.github.io/}{nfierroflo.github.io/}
+%\orcid{orcid.org/0000-0000-0000-0000} % Obviously making this up too. If you want to use this field (and also other academicons symbols), add "academicons" option to \documentclass{altacv}
+}
+
+
+%% Make the header extend all the way to the right, if you want.
+\begin{fullwidth}
+\makecvheader
+\end{fullwidth}
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+\cvsection[page1sidebar]{Experience}
+% Experience
+\cvevent{Data Scientist}{Accenture}{June 2024–Present}{Santiago, Chile}
+\begin{itemize}
+\item Designed and deployed \textbf{AI-based predictive models} for a global pulp company using advanced \textbf{time series forecasting architectures} such as \textbf{LSTM}, \textbf{TSMixer}, and \textbf{PatchTST}, achieving a projected \textbf{\$0.7M USD/year} in chemical savings. Models were integrated into production and into PI Vision for real-time monitoring.
+
+\item Developed an end-to-end \textbf{recommendation system} for one of Chile’s top beverage companies to optimize workforce allocation (pickers, forklift drivers, consolidators), delivering an estimated \textbf{\$5M USD/year} in savings.
+
+\item Delivered a \textbf{computer vision solution} for a leading mining and chemical company to audit nitrate loading and wait times, enabling a \textbf{\$1.2M USD/year} business case through automated anomaly detection and visual audit tools.
+
+\item Explored and prototyped \textbf{Generative AI applications}, including \textbf{multimodal RAG}, AI assistants, and chatbot interfaces using \textbf{LangChain} and \textbf{LangGraph}.
+
+\item Technical stack: \textbf{Python, PyTorch, TensorFlow, Terraform} (Infrastructure as Code), \textbf{Git}; Google Cloud Platform services including \textbf{BigQuery, Vertex AI, Cloud Functions, Cloud Scheduler, and Cloud Storage (GCS)}.
+\end{itemize}
+
+
+\cvevent{Data Scientist}{ISATEC (Instituto de Salud y Tecnología)}{July 2023–June 2024}{Santiago, Chile}
+
+ISATEC is an AI-assisted telemedicine company that links cardiologists and hospitals to improve patient treatment.
+\begin{itemize}
+\item Co-developed an \textbf{AI-powered ECG diagnostic system} to support remote triage in underserved regions, including \textbf{Acceptance/Rejection models} and a \textbf{Myocardial Infarction (MI)} detection algorithm using \textbf{computer vision on ECG spectrograms}, achieving \textbf{94\% accuracy} on production data. Designed a \textbf{U-Net architecture} for dense segmentation of time series.
+
+\item Technical stack: \textbf{Python 3, PyTorch 2, PyTorch Lightning, TensorBoard, Git, JupyterLab}; model training and inference conducted on ISATEC's remote compute servers.
+\end{itemize}
+
+\cvevent{Technical Consultant}{FoxIntelligence}{August 2022 – June 2023}{Paris, France (Remote)}
+\begin{itemize}
+    \item Led 7 e-commerce data analysis missions, improving product classification with \textbf{REGEX} and \textbf{Tableau}, achieving classification accuracy of over 80\%, often reaching 100\%.
+\end{itemize}
+
+
+\cvevent{Robotics Engineer}{Solystic}{July 2021 – January 2022}{Paris, France}
+\begin{itemize}
+    \item Developed an autonomous tracking system for the \textbf{Soly robot} to follow operators using \textbf{LIDAR sensors} and \textbf{camera integration}, ensuring adaptability in diverse environments. Successfully validated and approved by management for deployment.
+    \item Technical stack: \textbf{Python 3, C, QtCreator, LIDAR sensor integration, motion planning, tracking}.
+\end{itemize}
+
+
+\cvsection{Education}
+\cvevent{MSc in Engineering, Major in Electrical Engineering — \textbf{GPA: 7.0/7.0}
+}{Universdad de Chile}{2017-2024}{Santiago de Chile}
+Bachelor and MSc in Engineering, Major in Electrical Engineering.
+\href{https://repositorio.uchile.cl/handle/2250/202865}{Thesis} on Multi-Target Tracking (MTT) algorithms for extended objects using Random Finite Sets (RFSs) and Bayesian filters. Included neural networks and stereo camera techniques for object segmentation and depth estimation.
+    %\item Featured Courses: Computational Intelligence and Robotics Laboratory, Deep Learning, Evolutionary Computation, Introduction to Digital Image Processing, Neural Networks and Information Theory for Learning, Computational Intelligence, Introduction to Data Mining.
+
+
+\cvevent{MSc in Artificial Intelligence}{Centrale Supélec}{2019-2021}{Paris, France}
+Double Degree (Bachelor and MSc) in Engineering, Major in Artificial Intelligence. Université Paris-Saclay: 1st university in Mathematics (Shanghai Ranking
+2023).
+%\begin{itemize}
+    %\item Featured Courses: Projet de Programmation (Programming Project), Systèmes d’Information et Programmation (Information Systems and Programming), Algorithmique et complexité (Algorithms and Complexity), Réseaux et sécurité (Networks and Security), Traitement de signal (Signal Processing), Statistique et Apprentissage (Statistics and Learning).
+%\end{itemize}
+
+
+% \cvtag{Motivator \& Leader}
+
+
+% \cvtag{Motivator \& Leader}
+
+
+
+
+
+
+
+%\cvevent{}{Formando Chile}{2017}{Santiago,Chili}
+
+%\begin{itemize}
+%\item Basic Maths Professor in this solidarity project that offers free courses to students with economic difficulties.
+%\end{itemize}
+
+
+
+
+
+
+
+% \cvevent{Product Manager \& UI Lead}{Google}{Oct 2001 -- July 2005}{Palo Alto, CA}
+
+% \begin{itemize}
+% \item Appointed by the founder Larry Page in 2001 to lead the Product Management and User Interaction teams
+% \item Optimized Google's homepage and A/B tested every minor detail to increase usability (incl.~spacing between words, % color schemes and pixel-by-pixel element alignment)
+% \end{itemize}
+%
+% \divider
+
+% \cvevent{Product Engineer}{Google}{23 June 1999 -- 2001}{Palo Alto, CA}
+
+% \begin{itemize}
+% \item Joined the company as employe \#20 and female employee \#1
+% \item Developed targeted advertisement in order to use user's search queries and show them related ads
+% \end{itemize}
+
+% \cvsection{Achievements}
+
+% \cvevent{}{Distinction of outstanding student}{2018}{Universidad de Chile}
+% \begin{itemize}
+% \item Distinction awarded to the best engineering students of the year 
+% \end{itemize}
+
+
+% \cvevent{}{Andrés Bello scolarship}{2017}{Universidad de Chile}
+% \begin{itemize}
+% \item Scholarship granted by the Universidad de Chile to the first 10 students in the national admission test.
+% \end{itemize}
+
+
+% \cvevent{}{Maximum National Score}{2016}{Chile}
+% \begin{itemize}
+% \item  Maximum score at the national level in the math test in addition to the maximum average between math and Spanish in the region of La Serena.
+% \end{itemize}
+
+
+\clearpage
+
+% \cvsection[page2sidebar]{Publications}
+% 
+% \nocite{*}
+% 
+% \printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
+% 
+% \divider
+% 
+% \printbibliography[heading=pubtype,title={\printinfo{\faFileTextO}{Journal Articles}}, type=article]
+% 
+% \divider
+% 
+% \printbibliography[heading=pubtype,title={\printinfo{\faGroup}{Conference Proceedings}},type=inproceedings]
+% 
+%% If the NEXT page doesn't start with a \cvsection but you'd
+%% still like to add a sidebar, then use this command on THIS
+%% page to add it. The optional argument lets you pull up the
+%% sidebar a bit so that it looks aligned with the top of the
+%% main column.
+% \addnextpagesidebar[-1ex]{page3sidebar}
+
+
+\end{document}

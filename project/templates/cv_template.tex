@@ -1,0 +1,58 @@
+\documentclass[11pt,a4paper]{article}
+
+% Package imports
+\usepackage[utf8]{inputenc}
+\usepackage[margin=2cm]{geometry}
+\usepackage{hyperref}
+\usepackage{fontawesome}
+\usepackage{titlesec}
+
+% Custom commands
+\newcommand{\section}[1]{\large\textbf{#1}\medskip\hrule\bigskip}
+\newcommand{\entry}[4]{
+    {\textbf{#1}} \hfill {#2}\\
+    {\textit{#3}} \hfill {#4}\\
+}
+\newcommand{\skill}[2]{{\textbf{#1:}} #2 \\}
+
+\begin{document}
+
+\begin{center}
+    {\Huge \textbf{Your Name}}\\[0.3cm]
+    \faEnvelope\ email@example.com $|$
+    \faPhone\ +1234567890 $|$
+    \faLinkedin\ linkedin.com/in/yourprofile $|$
+    \faGithub\ github.com/yourusername
+\end{center}
+
+\section{Professional Summary}
+A brief professional summary highlighting your key strengths and career objectives.
+
+\section{Work Experience}
+\entry{Job Title}{Company Name}{Location}{Date Range}
+\begin{itemize}
+    \item Achievement or responsibility 1
+    \item Achievement or responsibility 2
+\end{itemize}
+
+\section{Education}
+\entry{Degree}{University Name}{Location}{Graduation Year}
+\begin{itemize}
+    \item Relevant coursework or achievements
+\end{itemize}
+
+\section{Skills}
+\skill{Programming Languages}{Python, Java, C++}
+\skill{Frameworks \& Tools}{React, Docker, Git}
+\skill{Soft Skills}{Leadership, Communication, Problem Solving}
+
+\section{Projects}
+\entry{Project Name}{Technologies Used}{Role}{Date}
+\begin{itemize}
+    \item Description of the project and your contributions
+\end{itemize}
+
+\section{Certifications}
+\entry{Certification Name}{Issuing Organization}{}{Date}
+
+\end{document} 
